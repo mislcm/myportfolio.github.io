@@ -1,0 +1,417 @@
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Enable smooth scrolling for the entire HTML document */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* General styling for the body */
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+    color: #000000; 
+    font-family: 'Barlow', sans-serif; 
+    font-size: 14px;
+  }
+  
+  /* Styling for headers (h1, h2, h3, h4) */
+  header h1,
+  header h2,
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Barlow', sans-serif; 
+    color: #053235; 
+  }
+  
+  /* Animated pulse text style */
+  .text {
+    font-family: 'Barlow', sans-serif; 
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-size: 12px;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite; /* pulse animation */
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #053235; 
+    color: #053235; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  /* Styling for header h1 */
+  header h1 {
+    font-size: 3.5em;
+    display: flex;
+    align-items: center;
+    color: #ffffff; 
+  }
+  
+  /* Styling for header h2 */
+  header h2 {
+    font-size: 2em;
+    color: #ffffff; 
+  }
+  
+  /* Styling for header h1, h2, h3, h4 */
+  h1, h2, h3, h4 {
+    color: #053235; 
+  }
+  
+  /* Notification styling */
+  .notification {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Notification anchor style */
+  .notification a {
+    text-decoration: none;
+  }
+  
+  /* Animated arrow styling for notification */
+  .arrow {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Styling for arrow before and after pseudo-elements */
+  .arrow:before,
+  .arrow:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: #00796b; /* Darker green color */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Styling for arrow before pseudo-element */
+  .arrow:before {
+    left: 0;
+    width: 51%;
+    transform: skew(0deg, 30deg);
+  }
+  
+  /* Styling for arrow after pseudo-element */
+  .arrow:after {
+    right: 0;
+    width: 51%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  /* Keyframe animation for arrow movement */
+  @keyframes move {
+    25% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+ 
+  
+  /* Section styling */
+  section {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header within a section styling */
+  section .header {
+    font-size: 2.5em;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 20px 20px 20px;
+    border-bottom: 5px solid #053235;
+  }
+  
+  
+  /* Small text within a section styling */
+  section small {
+    text-align: center;
+  }
+  
+  /* Styling for small anchor within a section */
+  section small a {
+    text-decoration: none;
+    color: #053235;
+    font-weight: bold;
+  }
+  
+  /* Detail styling */
+  .detail {
+    margin: 20px;
+  }
+  
+  /* Box within detail styling */
+  .detail .box {
+    z-index: 1;
+    padding: 10px;
+  }
+  
+  /* Header 3 within box styling */
+  .detail .box h3 {
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #053235;
+  }
+  
+
+  
+  /* Navigation styling (ABOUT+ PROJECT)*/
+  nav {
+    z-index: 2;
+    background-color: #053235;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0;
+  }
+  
+  /* Anchor within navigation styling */
+  nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  
+  /* Hover effect for anchor within navigation */
+  nav a:hover {
+    color: rgba(207, 171, 117, 255);
+  }
+  
+  /* Project database styling */
+  #projectDatabase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  /* Regular project styling within database */
+  #projectDatabase .regular {
+    height: 450px;
+  }
+  
+  /* Project box styling within database */
+  #projectDatabase .prjBox {
+    width: 350px;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  /* Paragraph within project box styling */
+  #projectDatabase .prjBox p {
+    font-size: 1em;
+    padding: 20px 20px 0 20px;
+  }
+  
+  /* Description within project box styling */
+  #projectDatabase .prjBox .description {
+    display: none;
+  }
+  
+  /* Project image styling within project box */
+  #projectDatabase .prjBox .prjImage {
+    position: absolute;
+    bottom: 60px;
+    height: 200px;
+    width: 95%;
+    border: 2px solid #053235;
+  }
+  
+  /* Image within project image styling */
+  #projectDatabase .prjBox .prjImage img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Launch section styling within project box */
+  #projectDatabase .prjBox .launch {
+    position: absolute;
+    bottom: 8px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 50px;
+    font-size: 2.5em;
+    padding: 5px;
+  }
+  
+  /* Anchor within launch section styling */
+  #projectDatabase .prjBox .launch a {
+    text-decoration: none;
+    color: #e2b780;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for project box */
+  #projectDatabase .prjBox:hover {
+    background-color: #053235;
+    opacity: 0.8;
+  }
+  
+  /* Hover effect for description within project box */
+  #projectDatabase .prjBox:hover .description {
+    display: block;
+  }
+  
+  /* Hover effect for project image within project box */
+  #projectDatabase .prjBox:hover .prjImage {
+    display: none;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #053235;
+    height: 50px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Footer content styling */
+  .footer-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Footer text styling */
+  .footer-text {
+    color: #e7e4e4;
+    text-align: center;
+    flex-grow: 1;
+    margin-left: 1px;
+  }
+  
+  /* Media query for screens with a minimum width of 900px */
+  @media screen and (min-width: 900px) {
+    header h1 {
+      font-size: 6em;
+    }
+    header h2 {
+      font-size: 3em;
+    }
+    nav a {
+      font-size: 2.2em;
+    }
+    section {
+      align-items: center;
+    }
+    section .header {
+      width: 90%;
+    }
+    section .detail {
+      padding: 2vh 5vw;
+    }
+  }
+  
+  /* Styling for the About section */
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  
+  /* Styling for the skills list */
+  .show-on-scroll {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Styling for each skill item */
+  .show-on-scroll li {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  /* Styling for text inside skill items */
+  .show-on-scroll p {
+    margin: 0 10px;
+  }
+  
+  /* Styling for icons inside skill items */
+  .show-on-scroll i {
+    font-size: 2em;
+  }
+  
+  /* Styling for the About section content */
+  #abouts {
+    text-align: center;
+  }
+  
+  /* Styling for the social icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -85px;
+  }
+  
+  /* Styling for individual social icons */
+  .icon-link {
+    margin: 0 15px;
+    color: black;
+    font-size: 3em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Styling for the hover effect on social icons */
+  .icon-link:hover {
+    color: #e2b780;
+  }
+  
+  /* Styling for the information text */
+  .info-text {
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
